@@ -18,6 +18,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { useState } from "react"
 import { maxKgNutsCanTranspoted } from "@/lib/utils"
 
+//TODO add validation for each line and check if input of each line is a number
 const FormSchema = z.object({
     bio: z
         .string()
