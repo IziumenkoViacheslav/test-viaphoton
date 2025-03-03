@@ -40,8 +40,6 @@ export function TextareaForm() {
 
         const [D, N, F, C] = values.map((value) => parseInt(value));
         const result = maxKgNutsCanTranspoted(D, N, F, C);
-        console.log({ result });
-
 
         setResult(result.toString());
     }
