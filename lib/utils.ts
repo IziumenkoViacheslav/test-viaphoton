@@ -24,6 +24,7 @@ export function maxKgNutsCanTranspoted(D: number, N: number, F: number, C: numbe
     } else { // last trip
       result += nutsInKg;
     }
+    // if D*F>C result must be > 0 horse have enough fuel for first trip
     nutsInKg -= fuelForOneRoundTripInKg;
   }
 
