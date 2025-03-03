@@ -42,7 +42,9 @@ export function TextareaForm() {
         const [D, N, F, C] = values.map((value) => parseInt(value));
         const result = maxKgNutsCanTranspoted(D, N, F, C);
 
-        setResult(result.toString());
+        const outputString = values.map(value => `${value} ${result}`).join('\n'); console.log({ outputString });
+
+        setResult(`${outputString}`);
     }
 
     return (
@@ -73,7 +75,7 @@ export function TextareaForm() {
                     <Button type="submit">Submit</Button>
                 </form>
             </Form>
-            <span>{result}</span>
+            <pre>{result}</pre>
         </div>
     )
 }
