@@ -17,7 +17,6 @@ export function maxKgNutsCanTranspoted(D: number, N: number, F: number, C: numbe
   const fuelForOneRoundTripInKg = fuelForOneTripInKg * 2;
 
   while (nutsInKg > 0) {
-    nutsInKg -= fuelForOneRoundTripInKg;
 
     if (nutsInKg > cartCapacityInKg) {
       result += cartCapacityInKg;
@@ -25,6 +24,7 @@ export function maxKgNutsCanTranspoted(D: number, N: number, F: number, C: numbe
     } else { // last trip
       result += nutsInKg;
     }
+    nutsInKg -= fuelForOneRoundTripInKg;
   }
 
   return result;
